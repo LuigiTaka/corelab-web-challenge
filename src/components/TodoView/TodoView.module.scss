@@ -1,0 +1,42 @@
+.TodoView {
+
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: inherit;
+  height: 100%;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+  }
+
+  & .TodoHeader {
+    display: flex;
+  }
+
+
+  & .TodoHeader:last-child {
+        margin-left: auto;
+  }
+
+  h2 {
+    flex-grow: 1;
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
+
+
+ }
+
+ .Body{
+    overflow: hidden;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: pre-line;
+  }
+

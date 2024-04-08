@@ -1,0 +1,25 @@
+.Header {
+  display: flex;
+  justify-content: flex-start;
+  align-content: baseline;
+  margin-bottom: 4rem;
+  padding: 1rem;
+  background-color: #ffff;
+
+  & div {
+      width: 100%;
+  }
+
+  & input {
+
+    width: 42%;
+  }
+
+  & .HeaderEnd{
+      margin-left: auto;
+  }
+
+
+}
+
+

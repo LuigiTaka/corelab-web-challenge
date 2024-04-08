@@ -1,0 +1,111 @@
+@import '../../index.module.scss';
+
+.Todo {
+    @include card-display(300px,417px);
+    @include card-border;
+    padding: 23px;
+}
+
+
+.TodoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px solid transparent;
+  padding: .6rem;
+}
+
+
+.TodoBodyWrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+.TodoBody {
+  height: 250px;
+  margin-bottom: 30px;
+  flex: 1;
+  flex-basis: 0;
+  min-height: 0;
+  white-space: pre-line;
+  font-size: 1.1rem
+}
+
+.TodoFooter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: auto;
+}
+
+.TodoBtnRemove {
+  margin-left: auto;
+}
+
+
+.TitleInput {
+  width: 100%;
+  border: unset;
+  font-weight: bold;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+.BtnGroup{
+    display: flex;
+    column-gap: 15px;
+
+    & button {
+        text-align:center;
+        background: #fff;
+        border: 1px solid grey;
+        border-radius: 50%;
+        width:3rem;
+        height:3rem;
+        cursor: pointer;
+    }
+
+    & button:last-child{
+        margin-left: auto;
+    }
+
+    & button:hover{
+        transition: .42s ease-in;
+        background: #e5e5e5;
+        color: black;
+    }
+}
+
+.TodoConfirm {
+
+
+width: 100%;
+    position: absolute;
+    background: #0000008c;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    align-items: center;
+    @include card-border;
+
+    & button {
+        border-radius:50%;
+        max-height: 20%;
+        padding:1rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
+    & button.Confirm{
+        background-color: #B9FFDD ;
+    }
+
+    & button.Refuse {
+        background-color:#F99494;
+    }
+}
