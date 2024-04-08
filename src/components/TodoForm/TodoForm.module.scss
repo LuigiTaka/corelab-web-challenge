@@ -1,0 +1,45 @@
+@import '../../index.module.scss';
+
+.TodoForm {
+  @include card-display(100%,100%);
+
+  &:hover,
+  &:focus,
+  &:active {
+  }
+
+    & div{
+        display:flex
+    }
+
+  textarea {   
+     display: block;
+      font-size: 1rem;
+      unicode-bidi: isolate;
+      border: none;
+      width: 100%; /* Opcional: ajuste a largura conforme necessário */
+      height: 100%;
+      background-color: transparent;
+  }
+
+  input[type="text"] {
+    background: transparent;
+    border: none;
+      
+    display: block;
+    font-size: 1.5em; /* Tamanho de fonte semelhante ao de H2 */
+    font-weight: bold; /* Pode variar dependendo do estilo do seu H2 */
+    border: none;
+    width: 100%; /* Opcional: ajuste a largura conforme necessário */
+
+
+  }
+
+    input[type='checkbox'] {
+        
+border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    }
+}

@@ -1,12 +1,9 @@
-interface ISearch {
-  placeholder: string;
-  value: string;
-  onChange: () => void;
-}
-
+import ISearch from '../../types/ISearch';
+import style from './Search.module.scss';
 const Search = (props: ISearch) => {
-  return (
-    <input type="text" placeholder={props.placeholder} value={props.value} />
+
+    return (
+    <input className={style.Search} type="text" onChange={ (e) => props.onChange(e) } placeholder={props.placeholder} value={props.value} />
   );
 };
 

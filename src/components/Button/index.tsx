@@ -1,10 +1,19 @@
+
 interface IButton {
-  onClick: () => void;
+  onClick: ( e : React.MouseEvent ) => void;
   text: string;
+  type:  "button" | "reset" | "submit";
+  className? : string;
+  icon ?: JSX.Element;
 }
 
 const Button = (props: IButton) => {
-  return <button onClick={props.onClick}>{props.text}</button>;
+  return (
+  <button title={ props.text } type={props.type} onClick={props.onClick} className={props.className}>
+    {props.icon}
+    { props.text}
+</button>
+);
 };
 
 export default Button;

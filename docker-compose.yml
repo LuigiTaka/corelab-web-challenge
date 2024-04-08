@@ -1,0 +1,20 @@
+# Use postgres/example user/password credentials
+version: '3.9'
+
+services:
+
+  node:
+    image: "node-front"
+    build:
+      context: ./
+      dockerfile: node-dockerfile
+    environment:
+      APP_ID: 'randomappkey' 
+    ports:
+      - 3001:3000
+    volumes:
+        - .:/usr/app
+    entrypoint: /usr/app/entrypoint.sh
+volumes:
+  db-data:
+    driver: local
